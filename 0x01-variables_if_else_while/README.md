@@ -25,3 +25,5 @@ Program 04: Prints the alphabet in lowercase, followed by a new line
 Program 05: Prints all single digit numbers of base 10 starting from 0, followed by a new line.
 
 Program 06: prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+Program 07:  prints the lowercase alphabet in reverse, followed by a new line.
