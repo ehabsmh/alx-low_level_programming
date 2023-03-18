@@ -16,3 +16,5 @@ The string Last digit of, followed by:
 			followed by a new line
 
 Program 02: prints the alphabet in lowercase, followed by a new line.
+
+Program 03: Prints the alphabet in lowercase, and then in uppercase, followed by a new line.
