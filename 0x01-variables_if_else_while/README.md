@@ -21,3 +21,5 @@ Program 03: Prints the alphabet in lowercase, and then in uppercase, followed by
 
 Program 04: Prints the alphabet in lowercase, followed by a new line
 	    Print all the letters except q and e
+
+Program 05: Prints all single digit numbers of base 10 starting from 0, followed by a new line.
