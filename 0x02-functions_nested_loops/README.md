@@ -48,3 +48,9 @@ Program 08: function that prints every minute of the day of Jack Bauer, starting
 
 Prototype: void jack_bauer(void);
 You can listen to this soundtrack while coding :)
+
+
+Program 09: function that prints the 9 times table, starting with 0.
+
+Prototype: void times_table(void);
+Format: see example
