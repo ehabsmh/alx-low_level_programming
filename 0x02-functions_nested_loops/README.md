@@ -37,3 +37,8 @@ Program 05:  function that prints the sign of a number.
 Program 06: function that computes the absolute value of an integer.
 
 		Prototype: int _abs(int);
+
+Prgoram 07:  function that prints the last digit of a number.
+
+Prototype: int print_last_digit(int);
+Returns the value of the last digit
