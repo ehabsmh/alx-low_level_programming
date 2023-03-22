@@ -8,9 +8,8 @@
  */
 int _abs(int n)
 {
-int num = n;
-if (n < 0)
-return (num * -1);
-else
-return (num);
+	if (n < 0)
+		return (-n);
+	else
+		return (n);
 }
