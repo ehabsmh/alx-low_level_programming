@@ -1,18 +1,7 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: always 0 (success)
- */
-int main(void)
-{
-	fizz_buzz();
-	return (0);
-}
-
-/**
- * fizz_buzz - prints the numbers from 1 to 100
+ * main - prints the numbers from 1 to 100
  *
  * for multiples of three print Fizz
  *
@@ -20,9 +9,9 @@ int main(void)
  *
  * for multiples of both three and five print FizzBuzz.
  *
- * Return: void
+ * Return: always 0 (Success)
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int i;
 
@@ -46,4 +35,5 @@ void fizz_buzz(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
