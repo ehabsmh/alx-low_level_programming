@@ -31,4 +31,13 @@ Program 04: Prints the numbers, from 0 to 9, followed by a new line.
 Program 05: Prints 10 times the numbers, from 0 to 14, followed by a new line.
 
 		- Prototype: void more_numbers(void);
-		- You can only use _putchar three times in your code
+		- only using _putchar three times in your code
+
+
+Program 06: draws a straight line in the terminal.
+
+		- Prototype: void print_line(int n);
+		- only using _putchar function to print
+		- Where n is the number of times the character _ should be printed
+		- The line should end with a \n
+		- If n is 0 or less, the function should only print \n
