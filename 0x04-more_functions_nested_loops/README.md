@@ -27,3 +27,8 @@ Program 04: Prints the numbers, from 0 to 9, followed by a new line.
 		- Prototype: void print_most_numbers(void);
 		- skipping the numbers 2 and 4
 		- only using _putchar twice in your code
+
+Program 05: Prints 10 times the numbers, from 0 to 14, followed by a new line.
+
+		- Prototype: void more_numbers(void);
+		- You can only use _putchar three times in your code
