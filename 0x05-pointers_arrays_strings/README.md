@@ -18,3 +18,8 @@ Program 03: Write a function that prints a string, followed by a new line, to st
 
 Prototype: void _puts(char *str);
 FYI: The standard library provides a similar function: puts.
+
+
+Program 04: Write a function that prints a string, in reverse, followed by a new line.
+
+Prototype: void print_rev(char *s);
