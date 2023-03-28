@@ -23,3 +23,8 @@ FYI: The standard library provides a similar function: puts.
 Program 04: Write a function that prints a string, in reverse, followed by a new line.
 
 Prototype: void print_rev(char *s);
+
+
+Program 05: Write a function that reverses a string.
+
+Prototype: void rev_string(char *s);
