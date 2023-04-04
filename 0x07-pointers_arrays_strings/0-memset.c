@@ -4,7 +4,7 @@
  * @s: is a pointer that points to the block of memory that needs to be filled
  * @b: is the byte we use
  * @n: number of bytes to fill
- * Return: s
+ * Return: pointer
  */
 
 char *_memset(char *s, char b, unsigned int n)
