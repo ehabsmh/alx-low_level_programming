@@ -1,27 +1,21 @@
 #include "main.h"
 
 /**
- * primeCheck - checks if num is prime
+ * prime_check - checks if num is prime
  * @a: int
  * @b: int
  *
  * Return: int
  */
 
-int primeCheck(int x, int y)
+int prime_check(int x, int y)
 {
-	if (y < 2 || y % a == 0)
-	{
+	if (y < 2 || y % x == 0)
 		return (0);
-	}
 	else if (x > y / 2)
-	{
 		return (1);
-	}
 	else
-	{
-		return (check(x + 1, y));
-	}
+		return (prime_check(x + 1, y));
 }
 
 /**
@@ -35,5 +29,5 @@ int is_prime_number(int n)
 {
 	if (n == 2)
 		return (1);
-	return (primeCheck(2, n));
+	return (prime_check(2, n));
 }
