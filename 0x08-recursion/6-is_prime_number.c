@@ -8,18 +8,18 @@
  * Return: int
  */
 
-int primeCheck(int a, int b)
+int primeCheck(int x, int y)
 {
-	if (a % b == 0 || b < 2)
+	if (x % y == 0 || y < 2)
 	{
 		return (0);
 	}
-	else if (a > b / 2)
+	else if (x > y / 2)
 	{
 		return (1);
 	}
 
-	return (check(a + 1, b));
+	return (check(x + 1, y));
 }
 
 /**
