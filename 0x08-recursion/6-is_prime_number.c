@@ -10,7 +10,7 @@
 
 int primeCheck(int x, int y)
 {
-	if (x % y == 0 || y < 2)
+	if (y < 2 || y % a == 0)
 	{
 		return (0);
 	}
@@ -18,8 +18,10 @@ int primeCheck(int x, int y)
 	{
 		return (1);
 	}
-
-	return (check(x + 1, y));
+	else
+	{
+		return (check(x + 1, y));
+	}
 }
 
 /**
