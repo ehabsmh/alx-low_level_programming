@@ -2,8 +2,8 @@
 
 /**
  * prime_check - checks if num is prime
- * @a: int
- * @b: int
+ * @x: int
+ * @y: int
  *
  * Return: int
  */
