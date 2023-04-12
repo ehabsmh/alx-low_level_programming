@@ -67,6 +67,12 @@ char *str_concat(char *s1, char *s2)
 	char *concated_str;
 	unsigned int i, s1_len = 0;
 
+	if (s1 == NULL || s2 == NULL)
+	{
+		s1 = "";
+		s2 = "";
+	}
+
 	s1 = _concat(s1, s2);
 
 	s1_len = _strLen(s1);
@@ -76,11 +82,6 @@ char *str_concat(char *s1, char *s2)
 	if (concated_str == NULL)
 		return (NULL);
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		s1 = "";
-		s2 = "";
-	}
 
 	for (i = 0; i <= s1_len; i++)
 	{
