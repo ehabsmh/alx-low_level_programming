@@ -67,11 +67,14 @@ char *str_concat(char *s1, char *s2)
 	char *concated_str;
 	unsigned int i, s1_len = 0;
 
-	if (s1 == NULL || s2 == NULL)
-	{
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+
+	if (s1 == NULL)
 		s1 = "";
+
+	if (s2 == NULL)
 		s2 = "";
-	}
 
 	s1 = _concat(s1, s2);
 
