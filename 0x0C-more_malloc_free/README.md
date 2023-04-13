@@ -1,6 +1,6 @@
 # Memory Allocation Programs
 
-**This repository contains five programs related to memory allocation. The programs were written in C language.**
+## **This repository contains five programs related to memory allocation. The programs were written in C language.**
 
 [Program 00: Malloc Checked](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x0C-more_malloc_free/0-malloc_checked.c)
 
