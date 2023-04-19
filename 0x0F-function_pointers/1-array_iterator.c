@@ -1,4 +1,4 @@
-#include "function_pointer.h"
+#include "function_pointers.h"
 
 /**
  * array_iterator - executes a function given as a parameter
@@ -11,7 +11,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
 
-	if (action == NULL || size < 1)
+	if (action == NULL || array == NULL)
 		return;
 
 	for (i = 0; i < size; i++)
