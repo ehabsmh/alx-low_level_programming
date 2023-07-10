@@ -1,54 +1,78 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * _strLen - Calculates the string's length
- * @str: Pointer to character
+ * _strlen - Evaluates the length of a string
+ * @s: array of strings (decayed into a pointer when passed as an argument)
  *
- * Return: Length of @str
+ * Return: the length of the string
  */
 
-int _strLen(char *str)
+int _strlen(char *s) /* char *s = str; */
 {
-	unsigned int i, len = 0;
+	unsigned int str_len = 0, i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		len++;
+		str_len++;
 	}
 
-	return (len);
+	return (str_len);
 }
 
 /**
- * _strdup - copying the string given as a parameter.
- * @str: pointer to the source string
+ * _strcpy - copies the string pointed to by src
+ * to the buffer pointed to by dest
  *
- * Return: Pointer to the copied string
+ * @dest: Pointer to the buffer
+ * @src: pointer to string
+ *
+ * Return: pointer to the string which copied
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	char *str;
+
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	dest[i] = '\0';
+
+	str = dest;
+
+	return (str);
+}
+
+/**
+ * _strdup - duplicate of `str` to a newely space in memory
+ * @str: string to be duplicated
+ *
+ * Return: NULL if malloc fails and if `str` is equal to NULL
+ * OTHERWISE Return pointer to the newely allocated memory
  */
 
 char *_strdup(char *str)
 {
-	char *copied_str;
-	unsigned int i, strLen = 0;
+	char *str_cpy;
+	int str_len;
 
 	if (str == NULL)
 		return (NULL);
 
-	strLen = _strLen(str);
+	str_len = _strlen(str);
 
-	copied_str = malloc(sizeof(char) * (strLen + 1));
+	str_cpy = malloc((sizeof(char) * str_len) + 1);
 
-	if (copied_str == NULL)
+	if (str_cpy == NULL)
 		return (NULL);
 
-	for (i = 0; i < strLen; i++)
-	{
-		copied_str[i] = str[i];
-	}
+	_strcpy(str_cpy, str);
 
-	copied_str[strLen] = '\0';
+	str_cpy[str_len] = '\0';
 
-	return (copied_str);
+	return (str_cpy);
 }
