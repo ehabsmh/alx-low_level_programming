@@ -131,9 +131,9 @@ char **strtow(char *str)
 			if (str[j] != ' ')
 			{
 				letter_index++;
-				if (str[j + 1] == ' ')
+				if (str[j + 1] == ' ' || str[j + 1] == '\0')
 				{
-					s[i] = malloc((letter_index + 1) * sizeof(char));
+					s[i] = malloc((letter_index + 2) * sizeof(char));
 				if (s[i] == NULL)
 				{
 					for (k = 0; k < i; k++)
