@@ -7,6 +7,9 @@
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
+char *_strncpy(char *dest, char *src, int n);
+int count_words(char *str);
+int _strcmp(char *s1, char *s2);
 
 /* main functions prototype */
 char *create_array(unsigned int size, char c);
