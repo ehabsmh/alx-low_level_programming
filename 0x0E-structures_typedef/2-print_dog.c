@@ -11,12 +11,6 @@ void print_dog(struct dog *d)
 	char *dog_name, *dog_owner;
 	float *dog_age;
 
-	if (!d)
-	{
-		printf("");
-		return;
-	}
-
 	dog_name = d->name;
 	dog_age = &(d->age);
 	dog_owner = d->owner;
@@ -27,7 +21,10 @@ void print_dog(struct dog *d)
 	if (!dog_owner)
 		dog_owner = "(nil)";
 
-	printf("Name: %s\n", dog_name);
-	printf("Age: %f\n", *dog_age);
-	printf("Owner: %s\n", dog_owner);
+	if (d)
+	{
+		printf("Name: %s\n", dog_name);
+		printf("Age: %f\n", *dog_age);
+		printf("Owner: %s\n", dog_owner);
+	}
 }
