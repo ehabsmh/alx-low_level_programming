@@ -16,7 +16,7 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 			return (s);
 
-		if (*(s + 1) == c)
+		if (s[i + 1] == c)
 			return (s + 1);
 	}
 
