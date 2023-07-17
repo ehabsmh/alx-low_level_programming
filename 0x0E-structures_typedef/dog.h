@@ -1,19 +1,19 @@
 #ifndef DOG_H
 #define DOG_H
 
-
 /**
- * struct dog - a dog struct
- * @name: Pointer to dog name
- * @age: dog age
- * @owner: Pointer to owner name
+ * struct dog - structure of dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * struct dog is a collection of data belongs to dogs
  */
-
 struct dog
 {
-	char *name;
-	float age;
-	char *owner;
+  char *name;
+  float age;
+  char *owner;
 };
 
 typedef struct dog dog_t;
