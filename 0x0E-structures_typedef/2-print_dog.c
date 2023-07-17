@@ -12,7 +12,10 @@ void print_dog(struct dog *d)
 	float *dog_age;
 
 	if (!d)
+	{
+		printf("");
 		return;
+	}
 
 	dog_name = d->name;
 	dog_age = &(d->age);
