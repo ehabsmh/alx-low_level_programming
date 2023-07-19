@@ -40,8 +40,15 @@ void op_codes(int bytes)
 {
 	int (*main_ptr)(int, char **);
 	unsigned int i;
+	int opcode_count = 0;
 
 	main_ptr = main;
+
+	while (((unsigned char *)(main_ptr))[opcode_count] != 0xC3)
+		opcode_count++;
+
+	if (bytes > opcode_count)
+		return;
 
 	for (i = 0; i < bytes; i++)
 	{
