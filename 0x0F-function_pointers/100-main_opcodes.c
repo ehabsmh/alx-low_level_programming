@@ -44,6 +44,12 @@ void op_codes(int bytes)
 
 	main_ptr = main;
 
+	if (bytes == 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
 	while (((unsigned char *)(main_ptr))[opcode_count] != 0xC3)
 		opcode_count++;
 
