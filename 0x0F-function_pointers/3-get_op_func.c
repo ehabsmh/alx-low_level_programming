@@ -3,12 +3,9 @@
  * get_op_func - selects the correct function to perform operation
  * @s: is the operator passed as an argument to the program
  *
- * Returns: a pointer to the function
+ * Return: a pointer to the function
  */
 
-/*  function named get_op_func receives pointer and returning pointer to a function
-		that receives two int arguments and returning int.
- */
 int (*get_op_func(char *s))(int a, int b)
 {
 	int i = 0;
