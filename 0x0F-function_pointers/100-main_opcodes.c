@@ -39,14 +39,14 @@ int main(int argc, char *argv[])
 void op_codes(int bytes)
 {
 	int (*main_ptr)(int, char **);
-	int i;
+	unsigned int i;
 
 	main_ptr = main;
 
 	for (i = 0; i < bytes; i++)
 	{
 		/* Print opcodes with hexadecimal */
-		printf("%02x ", *((unsigned char *)(main_ptr + i)));
+		printf("%02x ", ((unsigned char *)(main_ptr))[i]);
 	}
 	printf("\n");
 }
