@@ -43,7 +43,7 @@ void op_codes(int bytes)
 
 	main_ptr = main;
 
-	for (i = 0; i < bytes; i += 2)
+	for (i = 0; i < bytes; i++)
 	{
 		/* Print opcodes with hexadecimal */
 		printf("%02x ", *((unsigned char *)(main_ptr + i)));
