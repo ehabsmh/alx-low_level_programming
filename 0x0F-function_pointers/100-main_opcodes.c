@@ -39,27 +39,17 @@ int main(int argc, char *argv[])
 void op_codes(int bytes)
 {
 	int (*main_ptr)(int, char **);
-	unsigned int i;
-	int opcode_count = 0;
+	int i;
 
 	main_ptr = main;
-
-	if (bytes == 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-
-	while (((unsigned char *)(main_ptr))[opcode_count] != 0xC3)
-		opcode_count++;
-
-	if (bytes > opcode_count)
-		return;
 
 	for (i = 0; i < bytes; i++)
 	{
 		/* Print opcodes with hexadecimal */
-		printf("%02x ", ((unsigned char *)(main_ptr))[i]);
+		printf("%.2hhx", ((unsigned char *)(main_ptr))[i]);
+
+		if (i < bytes - 1)
+			printf(" ");
 	}
 	printf("\n");
 }
