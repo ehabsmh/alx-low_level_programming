@@ -46,8 +46,7 @@ void op_codes(int bytes)
 	for (i = 0; i < bytes; i++)
 	{
 		/* Print opcodes with hexadecimal */
-		printf("%.2hhx", ((unsigned char *)(main_ptr))[i]);
-
+		printf("%.2hhx", ((char *)(main_ptr))[i]);
 		if (i < bytes - 1)
 			printf(" ");
 	}
