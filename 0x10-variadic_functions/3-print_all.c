@@ -1,5 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
 #include "variadic_functions.h"
 
 /**
@@ -51,19 +49,18 @@ void print_string(va_list valist)
  * print_all - print varying input of ints, chars, float, and strings
  * @format: an array of chars signifying which data type to print
  */
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
 	char *separator = "";
 	int i, j = 0;
 	va_list valist;
 
 	datatype choice[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
-	};
+			{'c', print_char},
+			{'i', print_int},
+			{'f', print_float},
+			{'s', print_string},
+			{'\0', NULL}};
 
 	/* Iterate format, if datatype matched, access function via struct */
 	va_start(valist, format);
@@ -77,7 +74,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				choice[i].func(valist);
-				separtor = ", ";
+				separator = ", ";
 			}
 			i++;
 		}
