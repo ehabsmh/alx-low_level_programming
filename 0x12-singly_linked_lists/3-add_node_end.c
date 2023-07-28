@@ -21,24 +21,28 @@ int _strlen(const char *s) /* char *s = str; */
 
 
 /**
- * add_node - adds a node at the beginning of the linked list
+ * add_node_end - adds a node at the end of the linked list
  * @head: pointer to the head pointer
  * @str: the string will be duplicated
  *
  * Return: pointer to the new node
  * if something failed return NULL
 */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node = NULL;
 
-	if (!head || !str)
+	list_t *new_node = malloc(sizeof(list_t));
+	list_t *last = *head;
+
+	if (!(*head))
+	{
+		*head = new_node;
+		return (NULL);
+	}
+
+	if (!str || !new_node)
 		return (NULL);
 
-	new_node = malloc(sizeof(list_t));
-
-	if (!new_node)
-		return (NULL);
 
 	new_node->str = strdup(str);
 	if (!new_node->str)
@@ -47,10 +51,18 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new_node->len = _strlen(str);
-	new_node->next = *head;
+	new_node->len = _strlen(new_node->str);
+	new_node->next = NULL;
 
-	*head = new_node;
+	if (!last)
+		return (NULL);
+
+	while (last->next)
+	{
+		last = last->next;
+	}
+
+	last->next = new_node;
 
 	return (new_node);
 }
