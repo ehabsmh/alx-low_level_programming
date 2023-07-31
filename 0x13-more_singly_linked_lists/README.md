@@ -55,3 +55,16 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 - Return: the address of the new element, or NULL if it failed
 
 ---
+
+[Program 03: Free](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/3-add_nodeint_end.c):
+Frees a listint_t list.
+
+The prototype for the function is:
+```
+void free_listint2(listint_t **head);
+```
+
+***Requirements:***
+- The function sets the head to NULL
+
+---
