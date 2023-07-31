@@ -10,7 +10,7 @@ The prototype for the function is:
 size_t print_listint(const listint_t *h);
 ```
 
-	***Requirements:***
+***Requirements:***
 - Return: the number of nodes
 - Format: see example
 - You are allowed to use printf
@@ -25,7 +25,7 @@ The prototype for the function is:
 size_t listint_len(const listint_t *h);
 ```
 
-	***Requirements:***
+***Requirements:***
 - Return the number of nodes
 
 ---
@@ -38,7 +38,7 @@ The prototype for the function is:
 listint_t *add_nodeint(listint_t **head, const int n);
 ```
 
-	***Requirements:***
+***Requirements:***
 - Return: the address of the new element, or NULL if it failed
 
 ---
