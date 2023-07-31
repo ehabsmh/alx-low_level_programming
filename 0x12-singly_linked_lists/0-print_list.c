@@ -5,7 +5,7 @@
  * @h: the head pointer
  *
  * Return: number of nodes
-*/
+ */
 size_t print_list(const list_t *h)
 {
 	int i;
@@ -16,7 +16,6 @@ size_t print_list(const list_t *h)
 		return (0);
 
 	ptr = h;
-
 
 	for (i = 0; ptr; ptr = ptr->next, i++)
 	{

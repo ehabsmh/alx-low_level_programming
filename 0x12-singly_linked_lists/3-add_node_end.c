@@ -19,7 +19,6 @@ int _strlen(const char *s) /* char *s = str; */
 	return (str_len);
 }
 
-
 /**
  * add_node_end - adds a node at the end of the linked list
  * @head: pointer to the head pointer
@@ -27,7 +26,7 @@ int _strlen(const char *s) /* char *s = str; */
  *
  * Return: pointer to the new node
  * if something failed return NULL
-*/
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
 
