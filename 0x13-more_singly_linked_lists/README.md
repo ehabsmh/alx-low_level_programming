@@ -42,3 +42,16 @@ listint_t *add_nodeint(listint_t **head, const int n);
 - Return: the address of the new element, or NULL if it failed
 
 ---
+
+[Program 03: Add node at the end](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/3-add_nodeint_end.c):
+Adds a new node at the end of a listint_t list.
+
+The prototype for the function is:
+```
+listint_t *add_nodeint_end(listint_t **head, const int n);
+```
+
+***Requirements:***
+- Return: the address of the new element, or NULL if it failed
+
+---
