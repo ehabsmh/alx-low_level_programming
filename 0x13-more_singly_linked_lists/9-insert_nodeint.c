@@ -20,7 +20,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	new_node->n = n;
 
-	if (*head && idx == 0)
+	if (!*head)
+		new_node->next = NULL;
+	else if (*head && idx == 0)
 	{
 		new_node->next = *head;
 		*head = new_node;
@@ -31,8 +33,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	while (idx > 1 && traverse)
 	{
-		traverse = traverse->next;
 		idx--;
+		traverse = traverse->next;
 	}
 
 	if (!traverse)
