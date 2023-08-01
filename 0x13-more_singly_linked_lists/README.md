@@ -163,3 +163,19 @@ listint_t *reverse_listint(listint_t **head);
 - You can only declare a maximum of two variables in your function
 
 ---
+
+[Program 12: Print (safe version)](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/101-print_listint_safe.c):
+Prints a listint_t linked list.
+
+The prototype for the function is:
+```
+size_t print_listint_safe(const listint_t *head);
+```
+
+***Requirements:***
+- Returns: the number of nodes in the list
+- This function can print lists with a loop
+- You should go through the list only once
+- If the function fails, exit the program with status 98
+
+---
