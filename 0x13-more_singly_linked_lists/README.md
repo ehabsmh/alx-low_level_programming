@@ -91,3 +91,17 @@ int pop_listint(listint_t **head);
 - If the linked list is empty return 0
 
 ---
+
+[Program 07: Get node at index](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/7-get_nodeint.c):
+Returns the nth node of a listint_t linked list.
+
+The prototype for the function is:
+```
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+```
+
+***Requirements:***
+- where index is the index of the node, starting at 0
+- if the node does not exist, return NULL
+
+---
