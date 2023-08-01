@@ -10,16 +10,17 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *traverse = *head;
+	listint_t *next_node = NULL;
 
 	if (!traverse)
 		return;
 
 	while (traverse)
 	{
-		traverse = traverse->next;
-		free(*head);
-		*head = traverse;
+		next_node = traverse->next;
+		free(traverse);
+		traverse = next_node;
 	}
 
-	head = NULL;
+	*head = NULL;
 }
