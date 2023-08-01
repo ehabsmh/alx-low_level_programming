@@ -9,12 +9,11 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *traverse;
+	listint_t *traverse = *head;
 
-	if (!*head)
+	if (!traverse)
 		return;
 
-	traverse = *head;
 	while (traverse)
 	{
 		traverse = traverse->next;
@@ -22,5 +21,5 @@ void free_listint2(listint_t **head)
 		*head = traverse;
 	}
 
-	*head = NULL;
+	head = NULL;
 }
