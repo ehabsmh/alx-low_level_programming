@@ -11,7 +11,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *traverse = *head;
 
-	if (!traverse)
+	if (!traverse || !head)
 		return;
 
 	while (traverse)
@@ -22,5 +22,4 @@ void free_listint2(listint_t **head)
 	}
 
 	*head = NULL;
-	head = NULL;
 }
