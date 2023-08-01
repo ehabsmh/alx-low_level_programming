@@ -9,14 +9,14 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *traverse = *head;
+	listint_t *traverse;
 
-	if (!traverse || !head)
+	if (!head)
 		return;
 
-	while (traverse)
+	while (*head)
 	{
-		traverse = traverse->next;
+		traverse = (*head)->next;
 		free(*head);
 		*head = traverse;
 	}
