@@ -37,7 +37,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		traverse = traverse->next;
 	}
 
-	if (!traverse)
+	if (!traverse || !traverse->next)
 	{
 		free(new_node);
 		return (NULL);
