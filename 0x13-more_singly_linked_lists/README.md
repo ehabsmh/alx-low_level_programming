@@ -56,7 +56,17 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 
 ---
 
-[Program 03: Free](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/3-add_nodeint_end.c):
+[Program 04: Free list](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/4-free_listint.c):
+Frees a listint_t list.
+
+The prototype for the function is:
+```
+void free_listint(listint_t *head);
+```
+
+---
+
+[Program 05: Free](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/5-free_listint2.c):
 Frees a listint_t list.
 
 The prototype for the function is:
