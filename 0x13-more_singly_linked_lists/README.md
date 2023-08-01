@@ -133,3 +133,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 - if it is not possible to add the new node at index idx, do not add the new node and return NULL
 
 ---
+
+[Program 10: Delete at index](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/10-delete_nodeint.c):
+Deletes the node at index index of a listint_t linked list.
+
+The prototype for the function is:
+```
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
+```
+
+***Requirements:***
+- where index is the index of the node that should be deleted. Index starts at 0
+- Returns: 1 if it succeeded, -1 if it failed
+
+---
