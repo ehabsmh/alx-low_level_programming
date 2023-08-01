@@ -13,8 +13,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new_node, *traverse;
 
 	new_node = malloc(sizeof(listint_t));
-	if (!new_node || idx > listint_len(*head))
+	if (!new_node)
+	{
+		free(new_node);
 		return (NULL);
+	}
 
 	new_node->n = n;
 
@@ -45,24 +48,4 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	traverse->next = new_node;
 
 	return (new_node);
-}
-
-size_t listint_len(const listint_t *h)
-{
-	size_t number_nodes;
-	const listint_t *traversal;
-
-	if (!h)
-		return (0);
-
-	traversal = h;
-	number_nodes = 0;
-
-	while (traversal)
-	{
-		traversal = traversal->next;
-		number_nodes++;
-	}
-
-	return (number_nodes);
 }
