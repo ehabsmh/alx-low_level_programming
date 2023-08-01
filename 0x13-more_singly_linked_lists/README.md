@@ -105,3 +105,16 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 - if the node does not exist, return NULL
 
 ---
+
+[Program 08: Sum list](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/8-sum_listint.c):
+Returns the sum of all the data (n) of a listint_t linked list.
+
+The prototype for the function is:
+```
+int sum_listint(listint_t *head);
+```
+
+***Requirements:***
+- if the list is empty, return 0
+
+---
