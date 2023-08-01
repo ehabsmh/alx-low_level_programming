@@ -118,3 +118,18 @@ int sum_listint(listint_t *head);
 - if the list is empty, return 0
 
 ---
+
+[Program 09: Insert](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/9-insert_nodeint.c):
+Inserts a new node at a given position.
+
+The prototype for the function is:
+```
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+```
+
+***Requirements:***
+- where idx is the index of the list where the new node should be added. Index starts at 0
+- Returns: the address of the new node, or NULL if it failed
+- if it is not possible to add the new node at index idx, do not add the new node and return NULL
+
+---
