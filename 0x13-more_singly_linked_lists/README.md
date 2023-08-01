@@ -78,3 +78,16 @@ void free_listint2(listint_t **head);
 - The function sets the head to NULL
 
 ---
+
+[Program 06: Pop](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/6-pop_listint.c):
+Deletes the head node of a listint_t linked list, and returns the head node’s data (n).
+
+The prototype for the function is:
+```
+int pop_listint(listint_t **head);
+```
+
+***Requirements:***
+- If the linked list is empty return 0
+
+---
