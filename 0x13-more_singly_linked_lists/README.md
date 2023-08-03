@@ -1,6 +1,6 @@
 # Singly Linked List Programs
 
-### **This repository contains fifteen programs related to Singly Linked List. The programs were written in C language.**
+### **This repository contains fourteen programs related to Singly Linked List. The programs were written in C language.**
 
 [Program 00: Print list](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/0-print_listint.c):
 Prints all the elements of a listint_t list.
@@ -177,5 +177,20 @@ size_t print_listint_safe(const listint_t *head);
 - This function can print lists with a loop
 - You should go through the list only once
 - If the function fails, exit the program with status 98
+
+---
+
+[Program 13: Find the loop](https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/103-find_loop.c):
+Finds the loop in a linked list.
+
+The prototype for the function is:
+```
+listint_t *find_listint_loop(listint_t *head);
+```
+
+***Requirements:***
+- Returns: The address of the node where the loop starts, or NULL if there is no loop
+- You are not allowed to use malloc, free or arrays
+- You can only declare a maximum of two variables in your function
 
 ---
