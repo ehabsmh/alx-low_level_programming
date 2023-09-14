@@ -53,6 +53,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *traverse = head;
+
 	if (index == 0)
 		return (head);
 
