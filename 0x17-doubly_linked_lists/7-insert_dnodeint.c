@@ -14,11 +14,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 	dlistint_t *nth_node = NULL;
 
-	if (!new || !*h)
+	if (!new)
 		return (NULL);
 
-	/* If index == 0: add node at beginning */
-	if (idx == 0)
+	/* If linked list is empty or index == 0: add node at beginning */
+	if (!*h || idx == 0)
 	{
 		return (add_dnodeint(h, n));
 	}
