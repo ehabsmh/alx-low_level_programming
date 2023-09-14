@@ -10,33 +10,38 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *nth_node = NULL;
+	dlistint_t *t = NULL;
+	dlistint_t *v = NULL;
 
 	if (!*head)
 		return (-1);
 
-	nth_node = get_dnodeint_at_index(*head, index);
-
-	if (!nth_node)
-		return (-1);
-
 	if (index == 0)
 	{
-		if (nth_node->next)
-			nth_node->next->prev = NULL;
-
-		free(*head);
-		*head = nth_node->next;
+		t = *head;
+		*head = (*head)->next;
+		if (*head)
+			(*head)->prev = NULL;
+		free(t);
 		return (1);
 	}
 
-	if (nth_node->next)
-		nth_node->next->prev = nth_node->prev;
-	if (nth_node->prev)
-		nth_node->prev->next = nth_node->next;
-	free(nth_node);
+	t = get_dnodeint_at_index(*head, index);
 
-	return (1);
+	if (!t)
+		return (-1);
+
+	if (t->next)
+	{
+		v = t->next;
+
+		t->next = v->next;
+		if (v->next)
+			v->next->prev = t;
+		free(v);
+		return (1);
+	}
+	return (-1);
 }
 
 /**
@@ -48,7 +53,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *traverse = head;
-
 	if (index == 0)
 		return (head);
 

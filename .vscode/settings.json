@@ -1,7 +1,8 @@
 {
   "files.associations": {
     "stdio.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "lists.h": "c"
   },
   "editor.formatOnSave": true
 }
