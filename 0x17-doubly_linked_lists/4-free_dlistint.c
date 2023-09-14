@@ -9,6 +9,9 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *traverse = head;
 
+	if (!head)
+		return;
+
 	while (traverse->next)
 	{
 		traverse = traverse->next;
