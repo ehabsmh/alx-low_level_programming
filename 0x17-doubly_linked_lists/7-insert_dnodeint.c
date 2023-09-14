@@ -12,7 +12,6 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new = malloc(sizeof(dlistint_t));
-	dlistint_t *traverse = *h;
 	dlistint_t *nth_node = NULL;
 
 	if (!new || !*h)
