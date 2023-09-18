@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P /tmp https://github.com/ehabsmh/alx-low_level_programming/blob/main/0x18-dynamic_libraries/lib_hack.so
-export LD_PRELOAD=/tmp/lib_hack.so
+gcc -shared -o lib_hack.so -fPIC make_me_win.c
+export LD_PRELOAD=./lib_hack.so:$LD_LIBRARY_PATH
