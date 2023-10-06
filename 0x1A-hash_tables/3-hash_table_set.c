@@ -73,9 +73,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* Getting the key index */
 	k_index = key_index((unsigned char *)key, ht->size);
 
-	if (k_index == 0)
-		return (0);
-
 	arr = ht->array;
 	item = arr[k_index];
 
