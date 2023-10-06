@@ -22,9 +22,6 @@ hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 		{
 			free(traverse->value);
 			traverse->value = strdup(value);
-			if (!traverse->value)
-				return (NULL);
-
 			return (*h);
 		}
 
@@ -40,8 +37,6 @@ hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 		return (NULL);
 
 	new_node->value = strdup(value);
-	if (!new_node->key)
-		return (NULL);
 
 	new_node->next = *h;
 	*h = new_node;
@@ -61,7 +56,6 @@ hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	ul k_index;
-	hash_node_t **arr;
 	hash_node_t *item;
 
 	if (!ht)
@@ -73,12 +67,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* Getting the key index */
 	k_index = key_index((unsigned char *)key, ht->size);
 
-	arr = ht->array;
-	item = arr[k_index];
+	item = ht->array[k_index];
 
-	item = add_beginning(&item, key, value);
-
-	if (!item)
+	if (!add_beginning(&item, key, value))
 		return (0);
 
 	return (1);
