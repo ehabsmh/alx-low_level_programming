@@ -22,6 +22,9 @@ hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 		{
 			free(traverse->value);
 			traverse->value = strdup(value);
+			if (!traverse->value)
+				return (NULL);
+
 			return (*h);
 		}
 
@@ -33,7 +36,13 @@ hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 		return (NULL);
 
 	new_node->key = strdup(key);
+	if (!new_node->key)
+		return (NULL);
+
 	new_node->value = strdup(value);
+	if (!new_node->key)
+		return (NULL);
+
 	new_node->next = *h;
 	*h = new_node;
 
