@@ -9,10 +9,25 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	ul k_index = key_index((const unsigned char *)key, ht->size);
+	ul k_index;
+	hash_node_t *traverse;
 
-	if (ht->array[k_index]->key == NULL)
+	if (!ht || !key || *key == '\0')
 		return (NULL);
 
-	return (ht->array[k_index]->value);
+	k_index = key_index((const unsigned char *)key, ht->size);
+
+	traverse = ht->array[k_index];
+
+	while (traverse)
+	{
+		if (strcmp(traverse->key, key) == 0)
+		{
+			return (traverse->value);
+		}
+
+		traverse = traverse->next;
+	}
+
+	return (NULL);
 }
