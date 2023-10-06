@@ -2,28 +2,42 @@
 #include "stdbool.h"
 
 /**
- * hash_table_update - updates an element of the hash table.
- * @node: The hash table
+ * add_beginning - updates an element of the hash table.
+ * @h: The head of hash linked list
  * @key: The key
  * @value: The value associated with the key
- * Return: 1 if it succeeded, 0 otherwise
+ * Return: head if it succeeded, NULL otherwise
  */
 
-bool hash_table_update(hash_node_t *node, const char *key, const char *value)
+hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 {
-	while (node)
+	hash_node_t *traverse;
+	hash_node_t *new_node;
+
+	traverse = *h;
+
+	while (traverse)
 	{
-		if (strcmp(node->key, key) == 0)
+		if (strcmp(traverse->key, key) == 0)
 		{
-			free(node->value);
-			node->value = strdup(value);
-			return (true);
+			free(traverse->value);
+			traverse->value = strdup(value);
+			return (*h);
 		}
 
-		node = node->next;
+		traverse = traverse->next;
 	}
 
-	return (false);
+	new_node = malloc(sizeof(hash_node_t));
+	if (!new_node)
+		return (NULL);
+
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = *h;
+	*h = new_node;
+
+	return (*h);
 }
 
 /**
@@ -39,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	ul k_index;
 	hash_node_t **arr;
-	hash_node_t *item, *new_node;
+	hash_node_t *item;
 
 	if (!ht)
 		return (0);
@@ -56,20 +70,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	arr = ht->array;
 	item = arr[k_index];
 
-	new_node = item;
-	/* check if some update required */
-	if (hash_table_update(new_node, key, value) == 1)
-		return (1);
+	item = add_beginning(&item, key, value);
 
-	/* Flow here means insertion required */
-	new_node = malloc(sizeof(hash_node_t));
-	if (!new_node)
+	if (!item)
 		return (0);
-
-	new_node->key = strdup(key);
-	new_node->value = strdup(value);
-	new_node->next = item;
-	item = new_node;
 
 	return (1);
 }

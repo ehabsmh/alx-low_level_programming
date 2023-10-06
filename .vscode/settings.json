@@ -2,7 +2,9 @@
   "files.associations": {
     "stdio.h": "c",
     "stdlib.h": "c",
-    "lists.h": "c"
+    "lists.h": "c",
+    "string.h": "c",
+    "hash_tables.h": "c"
   },
   "editor.formatOnSave": true,
   "[python]": {
