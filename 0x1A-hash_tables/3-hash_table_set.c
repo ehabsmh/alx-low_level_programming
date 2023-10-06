@@ -11,35 +11,30 @@
 
 hash_node_t *add_beginning(hash_node_t **h, const char *key, const char *value)
 {
-	hash_node_t *traverse;
-	hash_node_t *new_node;
+	hash_node_t *temp;
 
-	traverse = *h;
+	temp = *h;
 
-	while (traverse)
+	while (temp)
 	{
-		if (strcmp(traverse->key, key) == 0)
+		if (strcmp(temp->key, key) == 0)
 		{
-			free(traverse->value);
-			traverse->value = strdup(value);
+			free(temp->value);
+			temp->value = strdup(value);
 			return (*h);
 		}
 
-		traverse = traverse->next;
+		temp = temp->next;
 	}
 
-	new_node = malloc(sizeof(hash_node_t));
-	if (!new_node)
+	temp = malloc(sizeof(hash_node_t));
+	if (!temp)
 		return (NULL);
 
-	new_node->key = strdup(key);
-	if (!new_node->key)
-		return (NULL);
-
-	new_node->value = strdup(value);
-
-	new_node->next = *h;
-	*h = new_node;
+	temp->key = strdup(key);
+	temp->value = strdup(value);
+	temp->next = *h;
+	*h = temp;
 
 	return (*h);
 }
